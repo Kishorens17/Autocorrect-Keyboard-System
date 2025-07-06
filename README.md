@@ -17,7 +17,7 @@ This is a simple GUI-based **Autocorrect Keyboard System** built using Python's 
 
 - Python 3.x
 - `pyspellchecker` library
-- `tkinter` (usually pre-installed with Python)
+- `tkinter` usually pre-installed with Python (For GUI if necessary)
 
 ### 📥 Installation
 
