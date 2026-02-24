@@ -1,0 +1,43 @@
+pipeline {
+    agent any
+
+    environment {
+        PYTHON = "C:\\Python313\\python.exe"
+        PIP = "C:\\Python313\\Scripts\\pip.exe"
+    }
+
+    stages {
+
+        stage('Clone Repository') {
+            steps {
+                echo 'Repository already cloned by Jenkins'
+            }
+        }
+
+        stage('Install Dependencies') {
+            steps {
+                bat """
+                %PIP% install pyspellchecker
+                """
+            }
+        }
+
+        stage('Run Program') {
+            steps {
+                bat """
+                %PYTHON% Main.py
+                """
+            }
+        }
+
+    }
+
+    post {
+        success {
+            echo 'Build SUCCESS ✅'
+        }
+        failure {
+            echo 'Build FAILED ❌'
+        }
+    }
+}
