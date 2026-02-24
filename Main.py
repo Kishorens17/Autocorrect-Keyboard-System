@@ -39,7 +39,8 @@ def autocorrect_text(input_text):
 
 # Example Usage
 if __name__ == "__main__":
-    input_text = input("Enter your sentence: ")
+    input_text = "hi helo how arg you"
     corrected, total = autocorrect_text(input_text)
     print(f"Total words corrected: {total}")
     print("Corrected Sentence:", corrected)
+
